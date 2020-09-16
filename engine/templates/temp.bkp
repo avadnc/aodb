@@ -1,0 +1,75 @@
+{literal}
+      var app = new Vue({
+          el: '#app',
+          data: { function(data) {
+                 
+              }
+          },
+          mounted: function() {
+            function obtenerVuelos() {
+               axios.post(url + '/custom/aodb/ajax/ajaxFlights.php')
+               .then(function(response) {
+               return response.data;
+
+               })
+               .catch(function(error) {
+               console.log(error);
+               });
+            }
+            var datos = obtenerVuelos();
+            console.log(datos);
+              $('#tabla-datos').DataTable({
+
+              });;
+          }
+      })
+{/literal}
+
+//JQUERY
+ <table id="tabla-datos" class="table table-bordered">
+          <thead class="thead-dark">
+              <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Flight Status</th>
+                  <th scope="col">Flight Number</th>
+                  <th scope="col">Departure Airport</th>
+                  <th scope="col">Arrival Terminal</th>
+                  <th scope="col">Arrival Estimated</th>
+                  <th scope="col">Arrival Gate</th>
+                  <th scope="col">Arrival Baggage</th>
+                  <th scope="col">Arrival Delay</th>
+              </tr>
+          </thead>
+
+      </table>
+
+//VUE
+ 	<table id="tabla-datos" class="table table-bordered">
+          <thead class="thead-dark">
+              <tr>
+                  <th>#</th>
+                  <th>Flight Status</th>
+                  <th>Flight Number</th>
+                  <th>Departure Airport</th>
+                  <th>Arrival Terminal</th>
+                  <th>Arrival Estimated</th>
+                  <th>Arrival Gate</th>
+                  <th>Arrival Baggage</th>
+                  <th>Arrival Delay</th>
+              </tr>
+		  </thead>
+		  <tbody>
+			 <tr v-for="flight in flights">
+			 	<td>{{flight.rowid}}</td>
+			 	<td>{{flight.flight_status}}</td>
+			 	<td>{{flight.flight_number}}</td>
+			 	<td>{{flight.departure_airport}}</td>
+			 	<td>{{flight.arrival_terminal}}</td>
+			 	<td>{{flight.arrival_estimated}}</td>
+			 	<td>{{flight.arrival_gate}}</td>
+			 	<td>{{flight.arrival_baggage}}</td>
+			 	<td>{{flight.arrival_delay}}</td> 
+			 </tr> 
+		  </tbody>
+
+	  </table>
