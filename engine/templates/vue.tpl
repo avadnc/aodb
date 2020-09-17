@@ -1,17 +1,17 @@
   <!-- Syncfusion Gantt -->
-  <link href="http://localhost/dolibarr/htdocs/custom/aodb/assets/content/ejthemes/default-theme/ej.web.all.min.css" rel="stylesheet"/>
-  <link href="http://localhost/dolibarr/htdocs/custom/aodb/assets/content/default.css" rel="stylesheet"/>
-  <link href="http://localhost/dolibarr/htdocs/custom/aodb/assets/content/default-responsive.css" rel="stylesheet"/>
-  <link href="http://localhost/dolibarr/htdocs/custom/aodb/assets/content/ejthemes/responsive-css/ej.responsive.css" rel="stylesheet"/>
-  <script src="http://localhost/dolibarr/htdocs/custom/aodb/assets/scripts/jsrender.min.js"></script>
-  <script src="http://localhost/dolibarr/htdocs/custom/aodb/assets/scripts/ej.web.all.min.js" type="text/javascript"></script>
-  <script src="http://localhost/dolibarr/htdocs/custom/aodb/assets/scripts/properties.js" type="text/javascript"></script>
-  <script src="http://localhost/dolibarr/htdocs/custom/aodb/assets/scripts/jsonganttdata.js"></script>
+  <link href="{$dol_url_root}/custom/aodb/assets/content/ejthemes/default-theme/ej.web.all.min.css" rel="stylesheet"/>
+  <link href="{$dol_url_root}/custom/aodb/assets/content/default.css" rel="stylesheet"/>
+  <link href="{$dol_url_root}/custom/aodb/assets/content/default-responsive.css" rel="stylesheet"/>
+  <link href="{$dol_url_root}/custom/aodb/assets/content/ejthemes/responsive-css/ej.responsive.css" rel="stylesheet"/>
+  <script src="{$dol_url_root}/custom/aodb/assets/scripts/jsrender.min.js"></script>
+  <script src="{$dol_url_root}/custom/aodb/assets/scripts/ej.web.all.min.js" type="text/javascript"></script>
+  <script src="{$dol_url_root}/custom/aodb/assets/scripts/properties.js" type="text/javascript"></script>
+  <script src="{$dol_url_root}/custom/aodb/assets/scripts/jsonganttdata.js"></script>
 
   <!-- Bootstrap 4.0 -->
-  <link rel="stylesheet" href="http://localhost/dolibarr/htdocs/custom/aodb/assets/content/bootstrap/css/bootstrap.min.css">
-  <script src="http://localhost/dolibarr/htdocs/custom/aodb/assets/content/bootstrap/js/popper.min.js" integrity="" crossorigin="anonymous"></script>
-  <script src="http://localhost/dolibarr/htdocs/custom/aodb/assets/content/bootstrap/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{$dol_url_root}/custom/aodb/assets/content/bootstrap/css/bootstrap.min.css">
+  <script src="{$dol_url_root}/custom/aodb/assets/content/bootstrap/js/popper.min.js" integrity="" crossorigin="anonymous"></script>
+  <script src="{$dol_url_root}/custom/aodb/assets/content/bootstrap/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
 
   <!-- Bootstrap extend 
   <link rel="stylesheet" href="{$dol_url_root}/custom/aodb/css/bootstrap-extend.css">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-09-17 21:02:52
+/* Smarty version 3.1.34-dev-7, created on 2020-09-17 21:09:03
   from 'C:\xampp\htdocs\dolibarr\htdocs\custom\aodb\engine\templates\vue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f63b2dcd21d35_37855886',
+  'unifunc' => 'content_5f63b44f16e6a1_32686227',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'afd9682bf8a32a356ac6f87336aedabc012a96f5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\dolibarr\\htdocs\\custom\\aodb\\engine\\templates\\vue.tpl',
-      1 => 1600369356,
+      1 => 1600369739,
       2 => 'file',
     ),
   ),
@@ -20,32 +20,43 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f63b2dcd21d35_37855886 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f63b44f16e6a1_32686227 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  <!-- Syncfusion Gantt -->
-  <link href="http://localhost/dolibarr/htdocs/custom/aodb/assets/content/ejthemes/default-theme/ej.web.all.min.css" rel="stylesheet"/>
-  <link href="http://localhost/dolibarr/htdocs/custom/aodb/assets/content/default.css" rel="stylesheet"/>
-  <link href="http://localhost/dolibarr/htdocs/custom/aodb/assets/content/default-responsive.css" rel="stylesheet"/>
-  <link href="http://localhost/dolibarr/htdocs/custom/aodb/assets/content/ejthemes/responsive-css/ej.responsive.css" rel="stylesheet"/>
+  <link href="<?php echo $_smarty_tpl->tpl_vars['dol_url_root']->value;?>
+/custom/aodb/assets/content/ejthemes/default-theme/ej.web.all.min.css" rel="stylesheet"/>
+  <link href="<?php echo $_smarty_tpl->tpl_vars['dol_url_root']->value;?>
+/custom/aodb/assets/content/default.css" rel="stylesheet"/>
+  <link href="<?php echo $_smarty_tpl->tpl_vars['dol_url_root']->value;?>
+/custom/aodb/assets/content/default-responsive.css" rel="stylesheet"/>
+  <link href="<?php echo $_smarty_tpl->tpl_vars['dol_url_root']->value;?>
+/custom/aodb/assets/content/ejthemes/responsive-css/ej.responsive.css" rel="stylesheet"/>
   <?php echo '<script'; ?>
- src="http://localhost/dolibarr/htdocs/custom/aodb/assets/scripts/jsrender.min.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['dol_url_root']->value;?>
+/custom/aodb/assets/scripts/jsrender.min.js"><?php echo '</script'; ?>
 >
   <?php echo '<script'; ?>
- src="http://localhost/dolibarr/htdocs/custom/aodb/assets/scripts/ej.web.all.min.js" type="text/javascript"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['dol_url_root']->value;?>
+/custom/aodb/assets/scripts/ej.web.all.min.js" type="text/javascript"><?php echo '</script'; ?>
 >
   <?php echo '<script'; ?>
- src="http://localhost/dolibarr/htdocs/custom/aodb/assets/scripts/properties.js" type="text/javascript"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['dol_url_root']->value;?>
+/custom/aodb/assets/scripts/properties.js" type="text/javascript"><?php echo '</script'; ?>
 >
   <?php echo '<script'; ?>
- src="http://localhost/dolibarr/htdocs/custom/aodb/assets/scripts/jsonganttdata.js"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['dol_url_root']->value;?>
+/custom/aodb/assets/scripts/jsonganttdata.js"><?php echo '</script'; ?>
 >
 
   <!-- Bootstrap 4.0 -->
-  <link rel="stylesheet" href="http://localhost/dolibarr/htdocs/custom/aodb/assets/content/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['dol_url_root']->value;?>
+/custom/aodb/assets/content/bootstrap/css/bootstrap.min.css">
   <?php echo '<script'; ?>
- src="http://localhost/dolibarr/htdocs/custom/aodb/assets/content/bootstrap/js/popper.min.js" integrity="" crossorigin="anonymous"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['dol_url_root']->value;?>
+/custom/aodb/assets/content/bootstrap/js/popper.min.js" integrity="" crossorigin="anonymous"><?php echo '</script'; ?>
 >
   <?php echo '<script'; ?>
- src="http://localhost/dolibarr/htdocs/custom/aodb/assets/content/bootstrap/js/bootstrap.min.js" integrity="" crossorigin="anonymous"><?php echo '</script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['dol_url_root']->value;?>
+/custom/aodb/assets/content/bootstrap/js/bootstrap.min.js" integrity="" crossorigin="anonymous"><?php echo '</script'; ?>
 >
 
   <!-- Bootstrap extend 
