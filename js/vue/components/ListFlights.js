@@ -72,7 +72,8 @@ Vue.component("list-flights", {
 					pageLength: 50,
 					autoWidth: false,
 					data: this.flights,
-					columns: [{
+					columns: [
+						{
 							data: "airline_icao",
 						},
 						{
@@ -204,7 +205,8 @@ Vue.component("list-flights", {
 									'">'
 								);
 							},
-						}, {
+						},
+						{
 							data: function (data) {
 								return (
 									'<input type="text" class="outlinenone" value="' +
@@ -219,10 +221,12 @@ Vue.component("list-flights", {
 							},
 						},
 					],
-					columnDefs: [{
-						width: "5%",
-						targets: 0,
-					}, ],
+					columnDefs: [
+						{
+							width: "5%",
+							targets: 0,
+						},
+					],
 				});
 			})
 			.catch((error) => {
@@ -233,5 +237,85 @@ Vue.component("list-flights", {
 		saluda: function () {
 			console.log("Hola desde el evento del botón");
 		},
+	},
+});
+
+Vue.component("gantt", {
+	template: ` 
+	<div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div id="GanttContainer" style="width:100%;height:450px;" />
+            </div>
+        </div>
+    </div>
+	`,
+	mounted: function () {
+		var d = new Date();
+		var strDate =
+			d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate();
+		console.log(strDate);
+		var projectData = [];
+
+		$.ajax({
+			url: url + "/ajax/ajaxGates.php",
+			async: false,
+			success: function (respuesta) {
+				var datos;
+				// projectData = JSON.parse(respuesta);
+				$.each(JSON.parse(respuesta), function (index, value) {
+				
+					projectData.push({
+						Airline: value.airline_icao,
+						Gate: value.arrival_gate,
+						StartDate: value.arrival_actual,
+						EndDate: value.departure_actual,
+					});
+				 console.log(value.departure_actual);
+				});
+			},
+			error: function () {
+				console.log("No se ha podido obtener la información");
+			},
+		});
+
+		console.log(projectData);
+		$(function () {
+			var data = ej.DataManager(projectData);
+			console.log(data);
+			$("#GanttContainer").ejGantt({
+				dateFormat: "yyyy-MM-ddThh:mm:ss",
+				durationUnit: ej.Gantt.DurationUnit.Minute,
+				scheduleHeaderSettings: {
+					scheduleHeaderType: ej.Gantt.ScheduleHeaderType.Hour,
+					minutesPerInterval: ej.Gantt.minutesPerInterval.FiveMinutes,
+				},
+				columnHeaderTexts: {
+					taskId: "Ariline",
+					taskName: "Gate"
+				},
+				dataSource: data,
+				allowSelection: true,
+				allowColumnResize: true,
+				taskIdMapping: "Airline",
+				rowHeight:
+					window.theme == "material"
+						? 48
+						: window.theme == "office-365"
+						? 36
+						: 30,
+				taskNameMapping: "Gate",
+				scheduleStartDate: new Date("2020-09-01"),
+				scheduleEndDate: new Date("2020-09-02"),
+				startDateMapping: "StartDate",
+				endDateMapping: "EndDate",
+				allowGanttChartEditing: false,
+				treeColumnIndex: 1,
+				isResponsive: true,
+				load: function () {
+					this.getColumns()[0].width = window.theme == "material" ? 60 : 30;
+				},
+			});
+		});
 	},
 });

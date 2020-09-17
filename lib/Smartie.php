@@ -45,6 +45,7 @@ class Smartie extends Smarty
 
 		$this->template_dir = DOL_DOCUMENT_ROOT.'/custom/aodb/engine/templates';
 		$this->compile_dir = DOL_DOCUMENT_ROOT.'/custom/aodb/engine/templates_c';
+		$this->smarty->compile_check = true;
 
 	}
 
